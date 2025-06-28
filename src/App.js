@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src="/logo.png" alt="KNS Logo" className="logo" />
+      <img src="logo512.png" alt="KNS Logo" className="logo" />
       <h1>KNS QR Code Generator</h1>
       <div className="input-box">
         <div className="gen">
@@ -72,7 +72,9 @@ function App() {
 
       {/* Footer */}
       <footer className="app-footer">
-        <p>© 2025 Country Advisor</p>
+        <p>© 2024 KNS QR Code Generator
+Enter text to encode
+</p>
         <p>
           Developed by{" "}
           <a
