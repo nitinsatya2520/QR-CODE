@@ -1,54 +1,100 @@
 @import url('http://fonts.cdnfonts.com/css/lilly'); 
-.App{ 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  min-height: 440px;
-  background-color: rgba(0, 247, 255, 0.24);
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #232946);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.App {
   text-align: center;
-  margin: 128px auto;
-  border-radius: 100px;
-  padding-bottom: 32px;
-  box-shadow:1px 1px 1px 9px rgb(0, 0, 0);
-} 
-h1{ 
-font-family: 'Lilly', sans-serif; 
-font-size: 50px; 
-} 
-.gen input{ 
-height: 35px; 
-width: 250px; 
-font-size: 20px; 
-padding-left: 5px; 
-border-radius: 100px;
-} 
-button{ 
-position: relative; 
-height: 38px; 
-width: 100px; 
-top: -2px; 
-font-size: 18px; 
-border: none; 
-color: rgb(0, 0, 0); 
-border-radius: 100px;
-background-color: rgb(0, 217, 255); 
-box-shadow:1px 1px 1px 2px rgb(0, 0, 0); 
-cursor: pointer; 
-} 
-button:active{ 
-box-shadow: none; 
-} 
-.extra{ 
-padding-top: 20px; 
-display: flex; 
-justify-content: space-around; 
-gap: 10px; 
-} 
-.output-box{ 
-display: flex; 
-flex-direction: column; 
-align-items: center; 
-gap: 40px; 
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #bb86fc;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px #bb86fc88;
+}
+
+.input-box,
+.output-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-box input[type="text"] {
+  width: 60%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: #2c2c3d;
+  color: #fff;
+  margin-right: 1rem;
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+.button,
+.output-box button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #bb86fc;
+  color: #1e1e2f;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 0.5rem;
+}
+
+.button:hover,
+.output-box button:hover {
+  background: #a45de2;
+  box-shadow: 0 0 12px #bb86fc88;
+}
+
+.extra {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.extra h5 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.extra input[type="color"],
+.extra input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
+  background: transparent;
+}
+
+.output-box img {
+  margin: 1rem auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 8px #bb86fc55);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0.5rem;
 }
