@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-    <img src="/logo196.png" alt="KNS Logo" className="logo" />
+    <img src="/logo192.png" alt="KNS Logo" className="logo" />
 
       <h1>KNS QR Code Generator</h1>
       <div className="input-box">
