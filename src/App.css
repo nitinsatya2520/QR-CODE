@@ -90,9 +90,22 @@ h1 {
   margin-top: 1.5rem;
   text-align: left;
 }
+/* Layout fix for sticky footer */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Push footer to bottom */
 .app-footer {
-  margin-top: 3rem;
+  margin-top: auto;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -107,11 +120,31 @@ h1 {
 .app-footer a {
   color: #bb86fc;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .app-footer a:hover {
   text-decoration: underline;
   color: #d1a9ff;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #bb86fc;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 
