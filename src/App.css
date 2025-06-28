@@ -60,6 +60,7 @@ h1 {
 /* Logo */
 .logo {
   height: 80px;
+  width: 80px;
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 6px #bb86fcaa);
   animation: float 3s ease-in-out infinite;
