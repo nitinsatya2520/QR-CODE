@@ -22,6 +22,7 @@ html, body, #root {
 /* Logo animation */
 .logo {
   height: 80px;
+  width: auto;
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 6px #bb86fcaa);
   animation: float 3s ease-in-out infinite;
