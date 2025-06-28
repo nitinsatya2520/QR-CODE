@@ -50,6 +50,23 @@ h1 {
   box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
+.logo {
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px #bb86fcaa);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
 .button,
 .output-box button {
   padding: 0.8rem 1.5rem;
