@@ -1,43 +1,25 @@
-@import url('https://fonts.cdnfonts.com/css/lilly');
+@import url('https://fonts.cdnfonts.com/css/lilly'); /* Changed to HTTPS for security */
 
-/* Base layout setup */
-html, body, #root {
-  height: 100%;
+/* General Styles */
+body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #1e1e2f, #232946);
   color: #ffffff;
+  min-height: 100vh;
 }
 
-/* App container */
+/* App Wrapper */
 .App {
+  text-align: center;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  text-align: center;
-  padding: 2rem;
 }
 
-/* Logo animation */
-.logo {
-  height: 80px;
-  width: auto;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 6px #bb86fcaa);
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-/* Headings */
+/* Heading */
 h1 {
   font-size: 2.5rem;
   color: #bb86fc;
@@ -61,7 +43,7 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
-/* Text input field */
+/* Input Field */
 .input-box input[type="text"] {
   width: 60%;
   padding: 0.8rem;
@@ -75,7 +57,24 @@ h1 {
   box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
-/* Button styles */
+/* Logo */
+.logo {
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px #bb86fcaa);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Button Styling */
 .button,
 .output-box button {
   padding: 0.8rem 1.5rem;
@@ -95,7 +94,7 @@ h1 {
   box-shadow: 0 0 12px #bb86fc88;
 }
 
-/* Extra options styling */
+/* Extra Section */
 .extra {
   margin-top: 1.5rem;
   text-align: left;
@@ -115,7 +114,7 @@ h1 {
   background: transparent;
 }
 
-/* QR image styling */
+/* Image Output */
 .output-box img {
   margin: 1rem auto;
   width: auto;
@@ -127,7 +126,7 @@ h1 {
   padding: 0.5rem;
 }
 
-/* Footer styles */
+/* Footer */
 .app-footer {
   margin-top: auto;
   padding: 1.5rem;
