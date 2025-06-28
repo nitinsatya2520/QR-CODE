@@ -7,16 +7,14 @@ function App() {
   const [size, setSize] = useState(400);
   const [bgColor, setBgColor] = useState("ffffff");
   const [qrCode, setQrCode] = useState("");
-  const [copied, setCopied] = useState(false); // For copy feedback
+  const [copied, setCopied] = useState(false);
 
-  // Update QR code when word, size, or background color changes
   useEffect(() => {
     setQrCode(
       `http://api.qrserver.com/v1/create-qr-code/?data=${word}&size=${size}x${size}&bgcolor=${bgColor}`
     );
   }, [word, size, bgColor]);
 
-  // Handle generate button click
   function handleClick() {
     if (temp.trim()) {
       setWord(temp);
@@ -25,7 +23,6 @@ function App() {
     }
   }
 
-  // Handle copy QR URL
   function handleCopy() {
     navigator.clipboard.writeText(qrCode);
     setCopied(true);
@@ -34,8 +31,7 @@ function App() {
 
   return (
     <div className="App">
-    <img src="logo512.png" alt="KNS Logo" className="logo" />
-
+      <img src="/logo.png" alt="KNS Logo" className="logo" />
       <h1>KNS QR Code Generator</h1>
       <div className="input-box">
         <div className="gen">
@@ -73,6 +69,21 @@ function App() {
           {copied ? "Copied!" : "Copy QR URL"}
         </button>
       </div>
+
+      {/* Footer */}
+      <footer className="app-footer">
+        <p>© 2025 Country Advisor</p>
+        <p>
+          Developed by{" "}
+          <a
+            href="https://techverrasolutions.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Techverra Solutions Pvt. Ltd.</strong>
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
