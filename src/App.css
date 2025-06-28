@@ -1,59 +1,25 @@
-@import url('http://fonts.cdnfonts.com/css/lilly'); 
-/* App.css */
+@import url('https://fonts.cdnfonts.com/css/lilly');
 
-body {
+/* Base layout setup */
+html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #1e1e2f, #232946);
   color: #ffffff;
-  min-height: 100vh;
-  
 }
 
+/* App container */
 .App {
-  text-align: center;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #bb86fc;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 8px #bb86fc88;
-}
-
-.input-box,
-.output-box {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(187, 134, 252, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
+  text-align: center;
   padding: 2rem;
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 600px;
-  transition: all 0.3s ease-in-out;
 }
 
-.input-box input[type="text"] {
-  width: 60%;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  outline: none;
-  background: #2c2c3d;
-  color: #fff;
-  margin-right: 1rem;
-  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
-}
-
+/* Logo animation */
 .logo {
   height: 80px;
   margin-bottom: 1rem;
@@ -70,7 +36,45 @@ h1 {
   }
 }
 
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #bb86fc;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px #bb86fc88;
+}
 
+/* Input and Output Box Styles */
+.input-box,
+.output-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Text input field */
+.input-box input[type="text"] {
+  width: 60%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: #2c2c3d;
+  color: #fff;
+  margin-right: 1rem;
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+/* Button styles */
 .button,
 .output-box button {
   padding: 0.8rem 1.5rem;
@@ -90,14 +94,39 @@ h1 {
   box-shadow: 0 0 12px #bb86fc88;
 }
 
+/* Extra options styling */
 .extra {
   margin-top: 1.5rem;
   text-align: left;
 }
-/* Layout fix for sticky footer */
 
+.extra h5 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  color: #cccccc;
+}
 
-/* Push footer to bottom */
+.extra input[type="color"],
+.extra input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
+  background: transparent;
+}
+
+/* QR image styling */
+.output-box img {
+  margin: 1rem auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 8px #bb86fc55);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+/* Footer styles */
 .app-footer {
   margin-top: auto;
   padding: 1.5rem;
@@ -139,30 +168,4 @@ h1 {
 .social-icons a:hover {
   color: #ffffff;
   transform: scale(1.2);
-}
-
-
-.extra h5 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1rem;
-  color: #cccccc;
-}
-
-.extra input[type="color"],
-.extra input[type="range"] {
-  width: 100%;
-  cursor: pointer;
-  height: 40px;
-  background: transparent;
-}
-
-.output-box img {
-  margin: 1rem auto;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 8px #bb86fc55);
-  border-radius: 8px;
-  background-color: #fff;
-  padding: 0.5rem;
 }
