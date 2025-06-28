@@ -8,11 +8,15 @@ body {
   background: linear-gradient(135deg, #1e1e2f, #232946);
   color: #ffffff;
   min-height: 100vh;
+  
 }
 
 .App {
   text-align: center;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -91,17 +95,7 @@ h1 {
   text-align: left;
 }
 /* Layout fix for sticky footer */
-body, html, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 /* Push footer to bottom */
 .app-footer {
